@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Limelight&family=Monoton&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Neuton:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        
+        <title>Lacuna</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>    
+        <script>            
+            
+            /* $(document).ready(function() {
+                $('html, body, *').mousewheel(function(e, delta) {
+                    // multiplying by 40 is the sensitivity, 
+                    // increase to scroll faster.
+                    this.scrollLeft -= (delta * 60);
+                    e.preventDefault();
+                });
+            }); */
+
+            $(document).ready(function() {
+                $(".nav-bar__link__box, .nav-bar__header, .landing-page__index__box").click(function(event) {
+                    var $link = $(this).attr("href");
+                    $("#main-container").animate({
+                        scrollLeft: $("#main-container").scrollLeft() + $($link).offset().left - 60
+                    }, 1000);
+                    event.preventDefault();
+                });
+            });
+
+            $(document).ready(function() {
+                $(".right-arrow").click(function(event) {          
+                    $("#main-container").animate({
+                        scrollLeft: $("#main-container").scrollLeft() + $(".section").width()
+                    }, 1000);
+                });
+            });
+
+            $(document).ready(function() {
+                $(".left-arrow").click(function(event) {          
+                    $("#main-container").animate({
+                        scrollLeft: $("#main-container").scrollLeft() - $(".section").width()
+                    }, 1000);
+                });
+            });
+        </script>
+    </head>
+    <body>               
+        <div class="intro__background">
+            <div class="intro__logo"></div>
+        </div>
+        
+        <nav class="nav-bar">
+            <div class="nav-bar__container">
+                <a class="nav-bar__header" href="#landing">
+                    <div class="nav-bar__logo-box">
+                        <svg class="nav-bar__logo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 90 90"><title>menuzinho</title><path d="M28.56,43.27l-26,15.06L0,53.94,18.45,43.27,0,32.59l2.54-4.38ZM5,62.71,38.6,43.34,5,23.9l2.54-4.46L41.29,39V0h5.09V38.88L80,19.44l2.54,4.38L48.78,43.34,82.57,62.78,80,67.16,46.38,47.79V86.6H41.29V47.72L7.56,67.16ZM36.2,30.05,10.18,15l2.55-4.39L31.11,21.28V0H36.2Zm0,26.44v30H31.11V65.32L12.73,75.93l-2.55-4.38ZM51.47,30.05V0h5.09V21.28L74.94,10.6,77.48,15Zm0,26.44,26,15.06-2.54,4.38L56.56,65.32V86.53H51.47ZM59,43.27,85.12,28.21l2.54,4.38L69.21,43.27,87.66,53.94l-2.54,4.39Z" fill="#ff8800"/></svg>
+                    </div>
+                    <h1 class="nav-bar__title">LACUNA</h1>
+                </a>
+                <ul class="nav-bar__nav">
+                    <li class="nav-bar__nav__item nav-bar__nav__item--nosedive">
+                        <svg class="nav-bar__nav__icon" width="100" height="100">
+                            <rect width="100" height="100"/>
+                        </svg> 
+                        <span class="nav-bar__nav__link">nosedive</span>
+                        <a class="nav-bar__link__box" href="#nosedive"></a>
+                    </li>
+                    <li class="nav-bar__nav__item nav-bar__nav__item--radchild">
+                        <svg class="nav-bar__nav__icon" width="100" height="100">
+                            <rect width="100" height="100"/>
+                        </svg> 
+                        <span class="nav-bar__nav__link">radchild</span>
+                        <a class="nav-bar__link__box" href="#radchild"></a>
+                    </li>
+                    <li class="nav-bar__nav__item nav-bar__nav__item--raphael">
+                        <svg class="nav-bar__nav__icon" width="100" height="100">
+                            <rect width="100" height="100"/>
+                        </svg> 
+                        <span class="nav-bar__nav__link">raphael bragiato</span>
+                        <a class="nav-bar__link__box" href="#raphael"></a>
+                    </li>
+                    <li class="nav-bar__nav__item nav-bar__nav__item--fernanda">
+                        <svg class="nav-bar__nav__icon" width="100" height="100">
+                            <rect width="100" height="100"/>
+                        </svg> 
+                        <span class="nav-bar__nav__link">fernanda gatto</span>
+                        <a class="nav-bar__link__box" href="#fernanda"></a>
+                    </li>
+                    <li class="nav-bar__nav__item nav-bar__nav__item--defeito">
+                        <svg class="nav-bar__nav__icon" width="100" height="100">
+                            <rect width="100" height="100"/>
+                        </svg> 
+                        <span class="nav-bar__nav__link">defeito</span>
+                        <a class="nav-bar__link__box" href="#defeito"></a>
+                    </li>            
+                    <li class="nav-bar__nav__item nav-bar__nav__item--autoboneco">
+                        <svg class="nav-bar__nav__icon" width="100" height="100">
+                            <rect width="100" height="100"/>
+                        </svg> 
+                        <span class="nav-bar__nav__link">autoboneco</span>
+                        <a id="linkautoboneco" class="nav-bar__link__box" href="#autoboneco"></a>
+                    </li>  
+                    <li class="nav-bar__nav__item nav-bar__nav__item--fuzue">
+                        <svg class="nav-bar__nav__icon" width="100" height="100">
+                            <rect width="100" height="100"/>
+                        </svg> 
+                        <span class="nav-bar__nav__link">fuzuê</span>
+                        <a class="nav-bar__link__box" href="#fuzue"></a>
+                    </li>
+                    <li class="nav-bar__nav__item nav-bar__nav__item--classificados">
+                        <svg class="nav-bar__nav__icon" width="100" height="100">
+                            <rect width="100" height="100"/>
+                        </svg> 
+                        <span class="nav-bar__nav__link">classificados</span>
+                        <a class="nav-bar__link__box" href="#classificados"></a>
+                    </li>
+                    <li class="nav-bar__nav__item nav-bar__nav__item--sobre">
+                        <svg class="nav-bar__nav__icon" width="100" height="100">
+                            <rect width="100" height="100"/>
+                        </svg> 
+                        <span class="nav-bar__nav__link">sobre</span>
+                        <a class="nav-bar__link__box" href="#sobre"></a>
+                    </li>
+                </ul>
+
+                <div class="social-logo-container">
+
+                    <a class="social-logo-link" href="https://www.facebook.com/">
+                        <svg class="social-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="30" height="30"
+                            viewBox="1 0 22 22">
+                            <path d="M12,2C6.477,2,2,6.477,2,12c0,5.395,4.275,9.78,9.621,9.981v-6.942H9.278v-2.725h2.343v-2.005 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365v6.659C18.768,20.613,22,16.689,22,12C22,6.477,17.523,2,12,2z"></path>
+                        </svg>
+                    </a>
+                    <a class="social-logo-link" href="https://twitter.com/">
+                        <svg class="social-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="30" height="30"
+                            viewBox="2 2 26 26">
+                            <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M21.464,12.535 c0.006,0.133,0.009,0.265,0.009,0.397c0,4.068-3.095,8.756-8.756,8.756c-1.739,0-3.356-0.509-4.717-1.383 c0.241,0.029,0.486,0.042,0.735,0.042c1.443,0,2.769-0.491,3.821-1.318c-1.347-0.025-2.484-0.915-2.875-2.137 c0.188,0.036,0.381,0.055,0.579,0.055c0.281,0,0.554-0.038,0.811-0.108c-1.408-0.282-2.469-1.526-2.469-3.017 c0-0.013,0-0.026,0-0.039c0.415,0.231,0.889,0.369,1.394,0.385c-0.825-0.551-1.369-1.494-1.369-2.561 c0-0.565,0.151-1.094,0.416-1.547c1.518,1.862,3.786,3.088,6.343,3.216c-0.052-0.225-0.079-0.46-0.079-0.701 c0-1.699,1.378-3.078,3.077-3.078c0.885,0,1.685,0.374,2.246,0.972c0.701-0.139,1.36-0.394,1.955-0.747 c-0.23,0.719-0.718,1.321-1.354,1.703c0.622-0.074,1.215-0.239,1.768-0.484C22.588,11.559,22.067,12.1,21.464,12.535z"></path>
+                        </svg> 
+                    </a>
+                    <a class="social-logo-link" href="https://instagram.com/">
+                        <svg class="social-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="30" height="30"
+                            viewBox="0 0 172 172">
+                            <g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86h0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="#FF8800"></path><g fill="#211916"><path d="M63.27305,31.82c-17.32197,0 -31.45305,14.13108 -31.45305,31.45305v45.45389c0,17.32197 14.13108,31.45305 31.45305,31.45305h45.45389c17.32197,0 31.45305,-14.13108 31.45305,-31.45305v-45.45389c0,-17.32197 -14.13108,-31.45305 -31.45305,-31.45305zM63.27305,40.15538h45.45389c12.8124,0 23.11767,10.28899 23.11767,23.11767v45.45389c0,12.8124 -10.28899,23.11767 -23.11767,23.11767h-45.45389c-12.8124,0 -23.11767,-10.28899 -23.11767,-23.11767v-45.45389c0,-12.8124 10.28899,-23.11767 23.11767,-23.11767zM117.25769,48.49077c-3.45137,0 -6.25154,2.80017 -6.25154,6.25154c0,3.45137 2.80017,6.25154 6.25154,6.25154c3.45137,0 6.25154,-2.80017 6.25154,-6.25154c0,-3.45137 -2.80017,-6.25154 -6.25154,-6.25154zM86,56.82615c-16.06841,0 -29.17385,13.10544 -29.17385,29.17385c0,16.06841 13.10544,29.17385 29.17385,29.17385c16.06841,0 29.17385,-13.10544 29.17385,-29.17385c0,-16.06841 -13.10544,-29.17385 -29.17385,-29.17385zM86,65.16154c11.55884,0 20.83846,9.27963 20.83846,20.83846c0,11.55884 -9.27963,20.83846 -20.83846,20.83846c-11.55883,0 -20.83846,-9.27963 -20.83846,-20.83846c0,-11.55883 9.27963,-20.83846 20.83846,-20.83846z"></path></g><path d="" fill="none"></path></g></g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="main-container" class="flex-container">
+            <div class="left-arrow arrow">
+                <svg id="seta" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><title>setinhaesquerda</title><path d="M45.5,48.5a2,2,0,0,0,1-3.74L10.64,24.54,46.45,5.26a2,2,0,1,0-1.9-3.52l-39,21a2,2,0,0,0,0,3.5l39,22A2,2,0,0,0,45.5,48.5Z"/></svg>
+            </div>
+
+            <div class="right-arrow arrow">
+                <svg id="seta" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><title>setinhadireita</title><path d="M6.5,48.5a2,2,0,0,1-1-3.74L41.36,24.54,5.55,5.26a2,2,0,1,1,1.9-3.52l39,21a2,2,0,0,1,0,3.5l-39,22A2,2,0,0,1,6.5,48.5Z"/></svg>
+            </div>
+
+            <div id="landing" class="section section__landing-page">
+                <div class="landing-page__index">
+                    <a class="landing-page__index__box" href="#nosedive">
+                        <div class="test__background test test-1"></div>
+                        <p class="test__text">nosedive</p>
+                    </a>
+                    <a class="landing-page__index__box" href="#radchild">
+                        <div class="test__background test test-2"></div>
+                        <p class="test__text">radchild</p>
+                    </a>
+                    <a class="landing-page__index__box rounded-top-right" href="#raphael">
+                        <div class="test__background test test-3"></div>
+                        <p class="test__text">raphael bragiatto</p>
+                    </a>
+                    <a class="landing-page__index__box" href="#fernanda">
+                        <div class="test__background test test-4"></div>
+                        <p class="test__text">fernanda gatto</p>
+                    </a>
+                    <a class="landing-page__index__box" href="#defeito">
+                        <div class="test__background test test-5"></div>
+                        <p class="test__text">defeito</p>
+                    </a>
+                    <a class="landing-page__index__box" href="#autoboneco">
+                        <div class="test__background test test-6"></div>
+                        <p class="test__text">autoboneco</p>
+                    </a>
+                    <a class="landing-page__index__box rounded-bottom-left" href="#fuzue">
+                        <div class="test__background test test-7"></div>
+                        <p class="test__text">fuzuê</p>
+                    </a>
+                    <a class="landing-page__index__box" href="#classificados">
+                        <div class="test__background test test-8"></div>
+                        <p class="test__text">classificados</p>
+                    </a>
+                    <a class="landing-page__index__box" href="#sobre">
+                        <div class="test__background test test-9"></div>
+                        <p class="test__text">sobre</p>
+                    </a>
+                </div>
+                <svg class="landing__logo" xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 480 467.58"><title>logo_saite</title><path d="M11.33,158.24s-11,27.87-10.18,86.53l.06,4.08S-1.67,344.71,93,422.68c26.68,22,79.31,47.25,110.65,44,22-2.29,3.76-35.15-3.61-52.6-1.76-4.16-17.48-38.07-19.16-42.26-5.65-14-14.91-30.05-36.2-14.22-37.1,27.58-57.35,8.51-67.59-6.45s-37.72-44.6-44.24-113.71C24.78,151.86,52.13,116.73,39.44,115,27.81,113.36,11.33,158.24,11.33,158.24Z"/><path d="M177.24,7.61c-3.24,0-48.93,7.8-61.4,34.64-10,21.58-5.33,70.63-.06,98.31,7.31,38.36,5.21,26.58,21.32,77.31,15.24,48,37.34,78.21,53.1,119.11,15.34,39.81,30.87,88.38,49.05,119C253,479,324.54,462,324.54,447S291.46,291.11,262.32,304.5s6.09,59.13-9.66,63.07-19.42-44-46.09-91.39c-29.51-52.48-45-84.3-52.14-141s-7.88-70.8-3.94-73.6,10.24-7.52,18.11,8.23S200.42,74.07,196.48,52,197.07,7.61,177.24,7.61Z"/><path d="M236,4.4l-3.3-.91s-19.28-3.4-21.86,7.24c-3.78,15.61,3.25,46.65,11.88,74.22s18.31,77,8.86,78.58-25.77-42.9-30.72-59.07C195.67,87.4,170.83,78.22,175.74,132s19.37,81.74,32.16,101.42,20.25,48.72,36.31,54.23,34-1.7,34-50.17C278.16,183.89,278.17,92.84,236,4.4Z"/><path d="M288.6,2.92h0A102.07,102.07,0,0,0,278.24.57c-7.56-1.29-16.5-1.44-12.77,21.2,5.37,32.59,20.44,61,26.74,116.13s6.51,117.48,5.87,134c-.88,22.59,8.61,67,18.09,60.41,15.14-10.55,16.24-137.31,20.18-138.89s15.79,59.6,9.89,94C339.42,327.09,326,382.33,329,396.34c3.81,17.84,8.42,72.19,34,37,22.69-31.25,39.46-169,37.54-233C398.56,134.53,380,35.74,342,17.64c-21.09-10,4.57,50.94,8.38,66,5.8,23,22.59,84.65,11.3,80-9.47-3.87-33.81-129.55-68.93-159.19C291.59,3.56,290,3.31,288.6,2.92Z"/><path d="M138.88,271.87c-33.31-61-43.09-138.3-42-165.16.85-21.94-5.12-51.66-13.08-48-5.88,2.68-10.5,9.39-13.84,14.92-3.56,5.89-6.47,11.53-10,25.34-5.92,23.21-10.11,93.82-10.11,123s23.81,118.68,54.75,125.9c45.51,10.62,8.66-35.63,1.13-48.12-11.63-19.31-17.74-55.44-2.53-31.88,18.91,29.29,25.2,69.25,60.15,63.12C179,328.17,150.82,293.72,138.88,271.87Zm-55.08-72c.33,1.75,1.86,9.2,2.18,10.56,1.73,7.31,3.74,11.65-.78,16-3,2.83-6.14,0-7.32-3.67-3.66-11.35-7-29.49-.86-48.44C79.4,167,82.38,192.44,83.8,199.91Z"/><path d="M462.35,131.24c-20-49-56.47-70.73-56.47-70.73-9.92-3.09-9,18.37-3.42,42.92,14.56,64,19.45,160.11,2.76,228-7.13,29-9.22,56.35-4.54,63.66,6.6,10.3,15.87-3.75,24.92-34,15.54-52.05,14.09-108.45,22.87-114.69,14.07-10-11.17,105.48,12,67.82C485.21,274,484.23,184.74,462.35,131.24ZM446,196c-3.47,2.16-2.66-12-3.28-19.75a37.35,37.35,0,0,0-.62-5.89c-1.11-5.45-1.59-13.19-2.19-20.31-.78-9.45,4.72-.41,8.34,12C454.56,183.72,450.44,193.16,446,196Z"/></svg>
+            </div>
+            
+            <div id="dna" class="section section__dna">
+                <div class="dna__textbox">
+                    <h1 class="dna__h1">DNA</h1>
+                    <p class="dna__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam aliquam sem et tortor consequat id porta nibh venenatis. Imperdiet sed euismod nisi porta lorem mollis aliquam. Et tortor consequat id porta nibh venenatis cras. Ultrices eros in cursus turpis massa tincidunt dui ut. Sem et tortor consequat id porta nibh. Adipiscing bibendum est ultricies integer. Neque sodales ut etiam sit amet nisl purus. Vitae tortor condimentum lacinia quis vel eros donec ac. Sed sed risus pretium quam vulputate dignissim suspendisse in est.
+                    </p>
+                </div>
+            </div>
+            
+            <div id="nosedive" class="section section__nosedive">
+                <div class="nosedive__text-area">
+                    <p class="nosedive__text-1">
+                        ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‎Formada no começo de 2019 com a proposta de criar um repertório intenso que mesclasse influências como o hardcore, post-rock e o rock alternativo dos anos 90, a sonoridade da Nosedive encontrou uma atmosfera carregada de tensão que flerta entre a agressividade e a sutileza. Seu material de estreia é o EP “Dull Days” com 5 músicas lançado em abril de 2020.
+                    </p>
+                </div>
+            </div>
+            
+            <div id="radchild" class="section section__radchild">
+                <div class="radchild__text-area">
+                    <p class="radchild__main-text">
+                        ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Suspendisse ultrices gravida dictum fusce ut placerat. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Varius sit amet mattis vulputate. Volutpat consequat mauris nunc congue nisi vitae suscipit. Nisi porta lorem mollis aliquam ut porttitor leo. Bibendum enim facilisis gravida neque convallis.
+                    </p>
+                    <div class="radchild__album-container">
+                        <div class="album-description-container">
+                            <div class="radchild__album__box radchild__album__box-1"></div>
+                            <p class="radchild__album__description radchild__album__description-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="album-description-container">
+                            <div class="radchild__album__box radchild__album__box-2"></div>
+                            <p class="radchild__album__description radchild__album__description-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="album-description-container">
+                            <div class="radchild__album__box radchild__album__box-3"></div>
+                            <p class="radchild__album__description radchild__album__description-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="raphael" class="section section__rapha section__rapha-1"></div>
+            <div class="section section__rapha section__rapha-2">
+                <p class="rapha-text">
+                    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada
+                </p>
+            </div>
+
+            <div id="fernanda" class="section section__fernanda section__fernanda-1"></div>
+            <div class="section section__fernanda section__fernanda-2">
+                <p class="fernanda-text">
+                    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎      ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎.
+                </p>
+            </div>
+
+            <div id="defeito" class="section section__defeito section__defeito-1">
+                <p class="defeito__text-1 defeito__text">
+                    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎     ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada 
+                </p>
+            </div>
+
+            <div class="section section__defeito section__defeito-2">
+                <p class="defeito__text-2 defeito__text">
+                    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada 
+                </p>
+            </div>
+            <div class="section section__defeito section__defeito-3"></div>
+
+            <div id="autoboneco" class="section section__autoboneco section__autoboneco-1"></div>
+            <div class="section section__autoboneco section__autoboneco-2"></div>
+
+            <div id="fuzue" class="section section__fuzue section__fuzue-1">
+                <p class="fuzue__text-1 fuzue__text">
+                    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada.
+                </p>
+            </div>
+            <div class="section section__fuzue section__fuzue-2">
+                <p class="fuzue__text-2 fuzue__text">
+                    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada‎‎‎Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dictum fusce. Tincidunt id aliquet risus feugiat. Leo vel fringilla est ullamcorper. Ultrices mi tempus imperdiet nulla malesuada 
+                </p>
+            </div>
+
+            <div id="classificados" class="section section__classificados section__classificados-1"></div>
+            <div class="section section__classificados section__classificados-2"></div>
+            <div class="section section__classificados section__classificados-3"></div>
+
+            <div id="sobre" class="section section__sobre">
+                <div class="sobre__flex-container">
+                    <p class="sobre__text">
+                        ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎      ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  A revista LACUNA surgiu da necessidade de criar um espaço para divulgação das mais diferentes produções artísticas baurenses. Em meio a uma crise global e um cenário político conturbado, reconhecemos a importância da arte e de conectar as pessoas dentro da nossa comunidade, facilitando a compreensão das características individuais que diferenciam tanto cada artista que compõe a nossa cena. Nesta edição, reunimos artistas e trabalhos que discutem essas questões e apontam as dificuldades, necessidades e surtos envolvidos na produção cultural independente na região de Bauru.
+                    </p>
+                    <div class="sobre__photos">
+                        <a class="photo__link" href="https://www.instagram.com/arasthesis.art/">
+                            <div class="photo photo__luisa"></div>
+                        </a>
+                        <a class="photo__link" href="https://www.instagram.com/dualexandrino/">
+                            <div class="photo photo__du"></div>
+                        </a>
+                        <a class="photo__link" href="https://www.behance.net/sfroeder">
+                            <div class="photo photo__sofia"></div>
+                        </a>
+                        <a class="photo__link" href="https://www.instagram.com/rhoandwhatever/">
+                            <div class="photo photo__rocco"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
